@@ -1,7 +1,7 @@
 import SHA256 from 'crypto-js/sha256.js';
 
 class Block {
-    
+
     #index;
     #timestamp;
     #data;

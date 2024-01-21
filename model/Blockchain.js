@@ -14,7 +14,7 @@ class Blockchain {
     }
 
     getChain() { return this.#chain }
-    
+
     getChainContent() {
         return this.#chain.map(block => ({
             index: block.getIndex(),
@@ -28,7 +28,7 @@ class Blockchain {
 
     /**
      * Adds a new block to the blockchain.
-     * @param {Block}
+     * @param {Block} block
      * @returns {void}
      * Increments the index of the block, attaches the previous hash,
      * recalculates its own hash, and pushes it to the chain list.
@@ -45,7 +45,7 @@ class Blockchain {
      * @returns {boolean}
      * Iterates through the blocks starting from the second block, and checks
      * if each block's hash matches the recalculated hash and if the previous
-     * hash matches the hash of the previous block in the chain.
+     * hash matches the hash of the preceding block in the chain.
     */    
     isValid() {
         return this.#chain.slice(1).every((block, i) =>
@@ -71,3 +71,4 @@ class Blockchain {
 }
 
 export default Blockchain;
+export {GENESIS_DATA};
