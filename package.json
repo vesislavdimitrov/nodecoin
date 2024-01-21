@@ -1,0 +1,15 @@
+{
+  "name": "nodecoin",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A simple blockchain implementation for educational purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Vesislav Dimitrov",
+  "license": "MIT",
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}
